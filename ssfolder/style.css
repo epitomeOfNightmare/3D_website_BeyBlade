@@ -1,0 +1,34 @@
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+  position: relative;
+	justify-content: center; /* Center horizontally */
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	width: 50%;
+	height: 50%;
+}
+
+.text-block {
+  position: absolute;
+	width: 24%; /* Make text span the entire width of the image */
+	height: 8%; /* Optional: make the text area cover the image */
+  top: 36%;
+  left: 38%;
+  background-color: gray;
+  color: white;
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+	text-align: center; /* Align text in the center */
+	padding-top: 10px;
+	margin: 0px;
+	border-radius: 10px;
+}
