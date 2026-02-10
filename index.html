@@ -1,22 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Text Overlay Image</title>
-		<link type="text/css" rel="stylesheet" href="./ssfolder/style.css">
+		<meta charset="UTF-8" />
+		<title>Beybalde</title>
+		<link rel="stylesheet" href="ssfolder/stylesheet.css" />
 	</head>
+	<body class="page">
 
-	<body>
-		<div class="container">
-			<img src="./assets/apple airpods max.jpg" alt="Apple Airpods Max" class="center">
-			<div class="text-block">
-				<h1>Apple Airpods Max</h1>
-				</a>
-				<h3>The ultimate over‑ear listening experience.</h3>
-				<br>
-				<span style="color: black;"><a href="webpage1.html">oi page</a></span>
+		<nav class="nav">
+			<div class="nav-logo-side">
+				<img src="logo.png" alt="Logo" class="logo">
+			</div>
+
+			<div class="nav-links-side">
+				<a href="#section1">Section page link</a>
+				<a href="#section2">Section page link</a>
+				<a href="/about.html">other page link</a>
+			</div>
+		</nav>
+
+		<div class="content">
+			<div id="wrapper">
+				<!-- Single container -->
+				<div id="single" class="card" onclick="splitCards()">
+					<img src="image1.jpg" alt="Main image">
+					<div class="info">
+						<h3>Click Me</h3>
+						<p>This will split into three options.</p>
+					</div>
+				</div>
+
+				<!-- Split cards (hidden change on click of first) -->
+				<div id="triple" class="card-group hidden">
+					<div class="card split up">
+						<img src="imageA.jpg">
+						<div class="info">
+							<h3>Blade</h3>
+							<p>sharp to slice throat</p>
+						</div>
+					</div>
+
+					<div class="card split center">
+						<img src="imageB.jpg">
+						<div class="info">
+							<h3>Ratchet</h3>
+							<p>though to tank cut</p>
+						</div>
+					</div>
+
+					<div class="card split down">
+						<img src="imageC.jpg">
+						<div class="info">
+							<h3>Bit</h3>
+							<p>drill into someone</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+
+		<footer class="footer">
+			Foot up A
+		</footer>
+
+		<script src="jsfolder/script"></script>
 	</body>
 </html>

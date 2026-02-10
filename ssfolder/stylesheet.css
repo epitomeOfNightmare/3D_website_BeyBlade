@@ -1,0 +1,139 @@
+html, body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/*==========================================================================================================*/
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  height: 50px;
+  background: #222;
+  color: white;
+}
+.content {
+  flex: 1;
+}
+.footer {
+  background: #222;
+  color: white;
+  padding: 15px;
+}
+
+.logo {
+  height: 32px;
+}
+
+.nav-logo-side {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  height: 100%;
+}
+.nav-links-side {
+  display: flex;
+  gap: 10px;
+  height: 100%;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+.nav a:hover {
+  background: #444;
+}
+/*==============================================================================================*/
+#wrapper {
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.card {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  align-items: center;
+  background: grey;
+}
+.card img {
+  width: 120px;
+}
+.info {
+  flex: 1;
+}
+
+.card-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.hidden {
+  display: none;
+}
+/*=========================================================================================================*/
+/* split animation */
+.split {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+.split.up {
+  animation-name: splitUp;
+}
+.split.center {
+  animation-name: splitCenter;
+}
+.split.down {
+  animation-name: splitDown;
+}
+/*========================================================================================================*/
+@keyframes splitUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes splitCenter {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes splitDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

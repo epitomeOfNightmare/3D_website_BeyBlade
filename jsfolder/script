@@ -1,0 +1,4 @@
+function splitCards() {
+  document.getElementById("single").classList.add("hidden");
+  document.getElementById("triple").classList.remove("hidden");
+}
