@@ -3,6 +3,7 @@ html, body {
   height: 100%;
   margin: 0;
   overflow-x: hidden;
+  background-color: darkgrey;
 }
 .page {
   display: flex;
@@ -10,6 +11,7 @@ html, body {
   min-height: 100vh;
 }
 /*==========================================================================================================*/
+/*  SOME STYLING FOR NAV, FOOTER SO AND SO*/
 .nav {
   display: flex;
   align-items: center;
@@ -28,6 +30,10 @@ html, body {
   padding: 15px;
 }
 
+/*
+Below is all for Navbar, logo the image, the side help arrange items to either side,
+a's just for buttons, the nav thing above
+*/
 .logo {
   height: 32px;
 }
@@ -56,8 +62,26 @@ html, body {
   background: #444;
 }
 /*==============================================================================================*/
+/*                For the presets                                   */
+.button-row{
+  display: flex; /*display and flex needed for gap between buttons*/
+  gap: 50px;
+  width: fit-content; /*ensure the buttons centered to page*/
+  margin: 0 auto;
+}
+.button-row button {
+  padding: 10px 50px; /* makes the size for button and rounds the edges */
+  border-radius: 25px;
+  border: none;
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+}
+/*==============================================================================================*/
+/*                THIS IS FOR THE CARD THE SPLITTING AND SO                           */
 #wrapper {
-  max-width: 900px;
+  max-width: 75%;
   margin: 50px auto;
 }
 
@@ -105,6 +129,7 @@ html, body {
   animation-name: splitDown;
 }
 /*========================================================================================================*/
+/*                              ACTUAL MOVEMENT OF DISPLAYS                           */
 @keyframes splitUp {
   from {
     transform: translateY(40px);
@@ -136,4 +161,23 @@ html, body {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+/*=====================================================================================================*/
+/*                          past the card animation                                         */
+.genInfo{
+  width: 95%;
+  max-width: 95%;
+  padding: 20px;
+  background-color: grey;
+  margin: 0 auto;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.preorder{
+  background-color: lightblue;
+  text-align: center;
 }

@@ -25,14 +25,24 @@
 			</div>
 		</div>
 
+		<div>
+			<h1 style="text-align: center;">Presets</h1>
+			<div class="button-row">
+				<button onclick="changeBladeDisplay(0); changeRatchetDisplay(0); changeBitDisplay(0)">Preset 1</button>
+				<button onclick="changeBladeDisplay(1); changeRatchetDisplay(1); changeBitDisplay(1)">Preset 2</button>
+				<button onclick="changeBladeDisplay(2); changeRatchetDisplay(2); changeBitDisplay(2)">Preset 3</button>
+			</div>
+		</div>
+
 		<div class="content">
 			<div id="wrapper">
 				<!-- Single container -->
 				<div id="single" class="card" onclick="splitCards()">
 					<img src="image1.jpg" alt="Main image">
 					<div class="info">
-						<h3>Click Me</h3>
-						<p>This will split into three options.</p>
+						<h5 class="blade-Selected">Click Me</h5>
+						<h5 class="ratchet-Selected">Click Me</h5>
+						<h5 class="bit-Selected">Click Me</h5>
 					</div>
 				</div>
 
@@ -41,7 +51,7 @@
 					<div class="card split up">
 						<img src="imageA.jpg">
 						<div class="info">
-							<h3>Blade</h3>
+							<h3 class="blade-Selected">Blade</h3>
 							<p>sharp to slice throat</p>
 						</div>
 					</div>
@@ -49,7 +59,7 @@
 					<div class="card split center">
 						<img src="imageB.jpg">
 						<div class="info">
-							<h3>Ratchet</h3>
+							<h3 class="ratchet-Selected">Ratchet</h3>
 							<p>though to tank cut</p>
 						</div>
 					</div>
@@ -57,7 +67,7 @@
 					<div class="card split down">
 						<img src="imageC.jpg">
 						<div class="info">
-							<h3>Bit</h3>
+							<h3 class="bit-Selected">Bit</h3>
 							<p>drill into someone</p>
 						</div>
 					</div>
@@ -67,14 +77,11 @@
 
 		<div class="genInfo">
 			<h2><u>General Part Information</u></h2>
-			<h3>Blade:</h3> 
-			<p>Blades are the main part of the direct contact with the opponent and primarily have metal contact</p>
-			<h3>Ratchet:</h3> 
-			<p>Ratchets determine the height of the Beyblade, the balance of the center of gravity and the impact position of the blade.</p>
-			<h3>Bit:</h3> 
-			<p>Bits are what touch the stadium floor and determine what type your Beyblade is, the movement pattern, Dash Performance, and Burst Resistance.</p>
+			<p><strong>Blade:</strong> Blades are the main part of the direct contact with the opponent and primarily have metal contact</p> 
+			<p><strong>Ratchet:</strong> Ratchets determine the height of the Beyblade, the balance of the center of gravity and the impact position of the blade.</p>
+			<p><strong>Bit:</strong> Bits are what touch the stadium floor and determine what type your Beyblade is, the movement pattern, Dash Performance, and Burst Resistance.</p>
 		</div>
-
+		<br><br><br><br><br>
 		<div class="preorder">
 			<h1>Pre-order your very own Beyblade</h1>
 			<h1>TODAY</h1>
@@ -93,6 +100,8 @@
 		    </nav>
 		</footer>
 
+		<!-- I hate this so much first script don't have .js for it to work, second need to have .js for it to work -->
 		<script src="jsfolder/script"></script>
+		<script src="jsfolder/Beyblade_Card_Information.js"></script>
 	</body>
 </html>
