@@ -87,6 +87,7 @@ a's just for buttons, the nav thing above
 
 .card {
   display: flex;
+  justify-content: center;
   gap: 15px;
   width: 100%;
   padding: 15px;
@@ -98,8 +99,20 @@ a's just for buttons, the nav thing above
 .card img {
   width: 120px;
 }
-.info {
+.group-info{
   flex: 1;
+}
+.single-info {
+  flex: 1;
+  text-align: center;
+}
+.left{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.right-img{
+  height: 100%;
 }
 
 .card-group {
@@ -180,4 +193,13 @@ a's just for buttons, the nav thing above
 .preorder{
   background-color: lightblue;
   text-align: center;
+}
+.preorder button{
+  padding: 15px 75px; /* makes the size for button and rounds the edges */
+  border-radius: 25px;
+  border: none;
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
 }
