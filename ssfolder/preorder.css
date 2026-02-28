@@ -1,3 +1,124 @@
-.form-area{
-    background-color: black;
+.itemButtons{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+.itemButtons h1{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.dropdown-row{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 10px 0;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown button{
+    padding: 10px;
+    min-width: 150px;
+    cursor: pointer;
+}
+.dropdown-options{
+    display: none;
+    position: absolute;
+    background: lightgray;
+    min-width: 150px;
+    z-index: 1;
+}
+.dropdown-options button{
+    display: block;
+    width: 100%;
+    border: none;
+    background: none;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+#content-area{
+    margin-top: 30px;
+    min-height: 500px;
+    background: white;
+    padding: 5px;
+}
+/*====================================First Layout====================================================*/
+
+.layout1 {
+    display: flex;
+    height: 100%;
+    border: 1px solid #ccc;
+}
+
+.layout1 .left-img {
+    width: 50%;
+    height: 100%;
+}
+.layout1 .left-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.layout1 .right-content {
+    width: 60%;
+    position: relative;
+    padding: 20px;
+}
+
+.text-top {
+    position: absolute;
+    top: 0%;
+}
+.text-middle {
+    position: absolute;
+    top: 30%;
+}
+
+.middle-box {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 100%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.middle-box .inner {
+    padding: 5px;
+}
+.middle-box .image-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.middle-box .image-row img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.bottom-controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.bottom-controls input {
+    width: 20%;
+    padding: 8px;
+}
+.bottom-controls button {
+    width: 70%;
+    padding: 8px;
+    font-weight: bold;
+    font-size: large;
 }
