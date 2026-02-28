@@ -1,0 +1,79 @@
+.cart{
+  padding: 5px;
+  background: lightcyan;
+}
+.cart-item{
+  width: 100%;
+  height: 50px;
+  border-top: 5px solid blue;
+  border-bottom: 5px solid blue;
+  justify-content: space-between;
+  padding: 5px;
+  background: lightblue;
+}
+.item-image{
+  width: 10%;
+}
+.item-name{
+  width: 60%;
+}
+.item-cost{
+  width: 20%;
+}
+
+.cart-info{
+  display: flex;
+  justify-content: space-between;
+}
+.cart-info span{
+  width: 40%;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.card-form{
+  padding: 20px;
+  margin: 20px;
+  background: white;
+}
+.form-submit{
+  text-align: center;
+}
+.form-submit button{
+  padding: 15px 30px;
+  font-weight: bolder;
+}
+
+.two-input{
+  width: 100%;
+  gap: 10%;
+  display: flex;
+}
+.single-input{
+  width: 100%;
+}
+
+
+
+.double-input{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.double-input input{
+  width: 100%;
+}
+
+.street-address{
+  width: 100%;
+}
+.street-address input{
+  width: 100%;
+}

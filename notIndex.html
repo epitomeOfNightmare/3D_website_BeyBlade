@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<title>Beyblade</title>
 		<link rel="stylesheet" href="ssfolder/stylesheet.css" />
+		<link rel="stylesheet" href="ssfolder/form.css" />
 	</head>
 	<body class="page">
 
@@ -19,42 +20,113 @@
 			</div>
 		</nav>
 
+		<br><br><br><br><br>
+
         <div class="cart">
 			<h2><u>Your Cart</u></h2>
-			
+			<div class="cart-item">
+				<img class="item-image" src="item.jpg" alt="hi">
+				<span class="item-name">item</span>
+				<span class="item-cost">Cost: $</span>
+			</div>
+			<br>
+			<div class="cart-info">
+				<span>No. of items in cart: 5</span>
+				<span>Total Cost: $0</span>
+			</div>
 		</div>
 
-        <div class="card">
+		<br><br><br>
+
+        <div class="card-form">
             <h3><u>Credit Card Information</u></h3>
 
             <form>
-                <label for="credit">First Name</label>
-                <br>
-                <textarea id="blog" name="blog" rows="1" cols="30">
-                </textarea>
-				<label for="credit">Last Name</label>
-                <br>
-                <textarea id="blog" name="blog" rows="1" cols="30">
-                </textarea>
-				<label for="credit">Credit Card Number</label>
-                <br>
-                <textarea id="blog" name="blog" rows="1" cols="30" minlength="16" maxlength="16">
-                </textarea>
-				<label for="credit">Last Name</label>
-                <br>
-                <textarea id="blog" name="blog" rows="1" cols="30">
-                </textarea>
-				<label for="credit">Last Name</label>
-                <br>
-                <textarea id="blog" name="blog" rows="1" cols="30">
-                </textarea>
-				<label for="credit">Last Name</label>
-                <br>
-                <textarea id="blog" name="blog" rows="1" cols="30">
-                </textarea>
+				<div class="two-input">
+					<div class="double-input">
+						<input type="text" id="FirstName">
+						<label for="credit">First Name</label>
+					</div>
+					<div class="double-input">
+						<input type="text" id="LastName">
+						<label for="credit">Last Name</label>
+					</div>
+				</div>
+				<br><br>
+				<div class="two-input">
+					<div class="double-input">
+						<input type="text" id="CardNumber">
+						<label for="credit">Credit Card Number</label>
+					</div>
+					<div class="double-input">
+						<input type="text" id="SecurityNumber">
+						<label for="credit">Security Code</label>
+					</div>
+				</div>
+				<br><br>
+				<div class="two-input">
+					<div class="double-input">
+						<input type="text" id="expMonth">
+						<label for="credit">Expiration Month</label>
+					</div>
+					<div class="double-input">
+						<input type="text" id="expYear">
+						<label for="credit">Expiration Month</label>
+					</div>
+				</div>
+				<br><br>
             </form>
+			
+			<h3><u>Billing Address</u></h3>
+
+			<form>
+				<div class="single-input">
+					<div class="street-address">
+						<input type="text" id="firstStreetAddress">
+						<br>
+						<label>Street Address</label>
+					</div>
+				</div>
+				<br><br>
+				<div class="single-input">
+					<div class="street-address">
+						<input type="text" id="secondStreetAddress">
+						<br>
+						<label>Street Address Line 2</label>
+					</div>
+				</div>
+				<br><br>
+				<div class="two-input">
+					<div class="double-input">
+						<input type="text" id="city">
+						<label>City</label>
+					</div>
+					<div class="double-input">
+						<input type="text" id="state">
+						<label>State / Province</label>
+					</div>
+				</div>
+				<br><br>
+				<div class="two-input">
+					<div class="double-input">
+						<input type="text" id="postal">
+						<label>Postal Code</label>
+					</div>
+					<div class="double-input">
+						<input type="text" id="country">
+						<label>Country</label>
+					</div>
+				</div>
+				<br><br>
+			</form>
+
+			<br><br><br>
+			<div class="form-submit">
+				<button>Submit</button>
+			</div>
         </div>
 
+		<br><br><br>
 
 		<footer class="footer">
 			<nav class="nav">

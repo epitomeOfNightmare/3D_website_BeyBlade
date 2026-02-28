@@ -203,3 +203,23 @@ a's just for buttons, the nav thing above
   cursor: pointer;
   font-size: 16px;
 }
+
+.info{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.info img{
+  width: 100%;
+  object-fit: cover;
+}
+.info-box{
+  position: absolute;
+  top: 0%;
+  right: 0px;
+  width: 30%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+}
