@@ -218,8 +218,11 @@ a's just for buttons, the nav thing above
   top: 0%;
   right: 0px;
   width: 30%;
-  height: 100%;
+  height: 99%;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   color: white;
+}
+.info-text{
+  padding-top: 30px;
 }

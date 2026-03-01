@@ -1,5 +1,5 @@
 .cart{
-  padding: 5px;
+  padding: 0px;
   background: lightcyan;
 }
 .cart-item{
@@ -10,6 +10,13 @@
   justify-content: space-between;
   padding: 5px;
   background: lightblue;
+}
+.cart-info{
+  padding-left:15px;
+  padding-bottom: 10px;
+}
+.cart-title{
+  padding-left: 15px
 }
 .item-image{
   width: 10%;
