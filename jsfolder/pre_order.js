@@ -1,66 +1,81 @@
 const model_and_cost = [
     {
-        model: "https://picsum.photos/600/800?1",
+        model: "assets/Images/Beyblades/Whole/FA-Whole.png",
         cost: "$10"
     },
     {
-        model: "https://picsum.photos/600/800?2",
+        model: "assets/Images/Beyblades/Whole/IW-Whole.png",
         cost: "$20"
     },
     {
-        model: "https://picsum.photos/600/800?3",
+        model: "assets/Images/Beyblades/Whole/SK-Whole.png",
         cost: "$30"
     }
 ]
 const layout2ItemsData = [
   {
     leftImage: "https://picsum.photos/80/80?1",
-    rightImage: "https://picsum.photos/100/50?1",
+    rightImage: "assets/Images/Beyblades/Blade/FA-Blade.png",
     text: "Item 1 Text",
     extra: [
       {
-        leftImage: "https://picsum.photos/80/80?11",
-        rightImage: "https://picsum.photos/100/50?11",
-        text: "Extra 1A",
+        leftImage: "assets/Images/Beyblades/Blade/FA-Blade.png",
+        rightImage: "assets/Images/Beyblades/Blade/FA-Blade.png",
+        text: "Attack Blade",
       },
       {
-        leftImage: "https://picsum.photos/80/80?12",
-        rightImage: "https://picsum.photos/100/50?12",
-        text: "Extra 1B",
+        leftImage: "assets/Images/Beyblades/Blade/IW-Blade.png",
+        rightImage: "assets/Images/Beyblades/Blade/IW-Blade.png",
+        text: "Defence Blade",
       },
+      {
+        leftImage: "assets/Images/Beyblades/Blade/SK-Blade.png",
+        rightImage: "assets/Images/Beyblades/Blade/SK-Blade.png",
+        text: "Speed Blade",
+      }
     ],
   },
   {
     leftImage: "https://picsum.photos/80/80?2",
-    rightImage: "https://picsum.photos/100/50?2",
+    rightImage: "assets/Images/Beyblades/Ratchet/FA-Ratchet.png",
     text: "Item 2 Text",
     extra: [
       {
-        leftImage: "https://picsum.photos/80/80?21",
-        rightImage: "https://picsum.photos/100/50?21",
-        text: "Extra 2A",
+        leftImage: "assets/Images/Beyblades/Ratchet/FA-Ratchet.png",
+        rightImage: "assets/Images/Beyblades/Ratchet/FA-Ratchet.png",
+        text: "Attack Ratchet",
       },
       {
-        leftImage: "https://picsum.photos/80/80?22",
-        rightImage: "https://picsum.photos/100/50?22",
-        text: "Extra 2B",
+        leftImage: "assets/Images/Beyblades/Ratchet/IW-Ratchet.png",
+        rightImage: "assets/Images/Beyblades/Ratchet/IW-Ratchet.png",
+        text: "Defence Ratchet",
+      },
+      {
+        leftImage: "assets/Images/Beyblades/Ratchet/SK-Ratchet.png",
+        rightImage: "assets/Images/Beyblades/Ratchet/SK-Ratchet.png",
+        text: "Defence Ratchet",
       },
     ],
   },
   {
     leftImage: "https://picsum.photos/80/80?3",
-    rightImage: "https://picsum.photos/100/50?3",
+    rightImage: "assets/Images/Beyblades/Bit/FA-Bit.png",
     text: "Item 3 Text",
     extra: [
       {
-        leftImage: "https://picsum.photos/80/80?31",
-        rightImage: "https://picsum.photos/100/50?31",
-        text: "Extra 3A",
+        leftImage: "assets/Images/Beyblades/Bit/FA-Bit.png",
+        rightImage: "assets/Images/Beyblades/Bit/FA-Bit.png",
+        text: "Attack Bit",
       },
       {
-        leftImage: "https://picsum.photos/80/80?32",
-        rightImage: "https://picsum.photos/100/50?32",
-        text: "Extra 3B",
+        leftImage: "assets/Images/Beyblades/Bit/IW-Bit.png",
+        rightImage: "assets/Images/Beyblades/Bit/IW-Bit.png",
+        text: "Defense Bit",
+      },
+      {
+        leftImage: "assets/Images/Beyblades/Bit/SK-Bit.png",
+        rightImage: "assets/Images/Beyblades/Bit/SK-Bit.png",
+        text: "Speed Bit",
       },
     ],
   },
@@ -90,9 +105,9 @@ function loadLayout1() {
                     <div class="inner">
                         <h3>Variations</h3>
                         <div class="image-row">
-                            <img src="https://picsum.photos/100?1" onclick="changeContent(0)">
-                            <img src="https://picsum.photos/100?2" onclick="changeContent(1)">
-                            <img src="https://picsum.photos/100?3" onclick="changeContent(2)">
+                            <img src="assets/Images/Beyblades/Whole/FA-Whole.png" onclick="changeContent(0)">
+                            <img src="assets/Images/Beyblades/Whole/IW-Whole.png" onclick="changeContent(1)">
+                            <img src="assets/Images/Beyblades/Whole/SK-Whole.png" onclick="changeContent(2)">
                         </div>
                     </div>
                 </div>
@@ -105,50 +120,37 @@ function loadLayout1() {
             </div>
         </div>
     `;
+
+    changeContent(0);
 }
 function loadLayout2() {
-    document.getElementById("content-area").innerHTML = `
+  const content = document.getElementById("content-area");
+
+  let leftItemsHTML = "";
+
+  layout2ItemsData.forEach((item, index) => {
+    leftItemsHTML += `
+      <div class="first-div" data-index="${index}">
+        <img class="main-image" src="${item.leftImage}">
+        <div class="second-div" onclick="toggleExtraDivs(this)" data-index="${index}">
+          <p class="second-text">${item.text}</p>
+          <img class="second-image" src="${item.rightImage}">
+        </div>
+      </div>
+    `;
+  });
+
+  content.innerHTML = `
     <div class="layout2">
-
-      <!-- LEFT COLUMN -->
       <div class="layout2-left-items">
-
-        <!-- First Div 1 -->
-        <div class="first-div">
-          <img class="main-image" src="https://picsum.photos/80/80?1">
-          <div class="second-div" onclick="toggleExtraDivs(this)" data-text="Item 1" data-image="https://picsum.photos/60/60?1">
-            <p class="second-text">Item 1</p>
-            <img class="second-image" src="https://picsum.photos/60/60?1">
-          </div>
-        </div>
-
-        <!-- First Div 2 -->
-        <div class="first-div">
-          <img class="main-image" src="https://picsum.photos/80/80?2">
-          <div class="second-div" onclick="toggleExtraDivs(this)" data-text="Item 2" data-image="https://picsum.photos/60/60?2">
-            <p class="second-text">Item 2</p>
-            <img class="second-image" src="https://picsum.photos/60/60?2">
-          </div>
-        </div>
-
-        <!-- First Div 3 -->
-        <div class="first-div">
-          <img class="main-image" src="https://picsum.photos/80/80?3">
-          <div class="second-div" onclick="toggleExtraDivs(this)" data-text="Item 3" data-image="https://picsum.photos/60/60?3">
-            <p class="second-text">Item 3</p>
-            <img class="second-image" src="https://picsum.photos/60/60?3">
-          </div>
-        </div>
-
+        ${leftItemsHTML}
       </div>
 
-      <!-- RIGHT SIDE -->
       <div class="layout2-right">
         <h1>Right Title</h1>
         <p>Some description text here</p>
         <button>Full Width Button</button>
       </div>
-
     </div>
   `;
 }
@@ -184,50 +186,49 @@ function changeContent(index) {
 
 function toggleExtraDivs(secondDiv) {
   const parent = secondDiv.parentNode;
+  const index = secondDiv.dataset.index;
+  const itemData = layout2ItemsData[index];
 
-  // Remove existing overlays if already expanded
+  // Remove if already expanded
   if (secondDiv.classList.contains("expanded")) {
-    const existingContainer = parent.querySelector(".overlay-container");
-    if (existingContainer) existingContainer.remove();
+    const existing = parent.querySelector(".overlay-container");
+    if (existing) existing.remove();
     secondDiv.classList.remove("expanded");
     return;
   }
 
   secondDiv.classList.add("expanded");
 
-  // Create overlay container
   const overlayContainer = document.createElement("div");
   overlayContainer.classList.add("overlay-container");
 
-  // Position overlay container right of second-div
-  const secondRect = secondDiv.getBoundingClientRect();
-  const parentRect = parent.getBoundingClientRect();
-  overlayContainer.style.top = (secondDiv.offsetTop) + "px";
-  overlayContainer.style.left = (secondDiv.offsetLeft + secondDiv.offsetWidth) + "px";
+  overlayContainer.style.top = secondDiv.offsetTop + "px";
+  overlayContainer.style.left =
+    secondDiv.offsetLeft + secondDiv.offsetWidth + "px";
 
   parent.appendChild(overlayContainer);
 
-  const text = secondDiv.dataset.text;
-
-  // Create 3 overlay divs horizontally
-  for (let i = 1; i <= 3; i++) {
+  // 🔥 Use the array's extra data
+  itemData.extra.forEach(extraItem => {
     const overlay = document.createElement("div");
     overlay.classList.add("overlay-div");
+
     overlay.innerHTML = `
-      <p>${text} Option ${i}</p>
-      <img src="https://picsum.photos/60/60?${i + 10}">
+      <p>${extraItem.text}</p>
+      <img src="${extraItem.rightImage}">
     `;
 
     overlay.addEventListener("click", () => {
-      // Update main-image and second-div
-      parent.querySelector(".main-image").src = overlay.querySelector("img").src;
-      secondDiv.querySelector(".second-image").src = overlay.querySelector("img").src;
-      secondDiv.querySelector(".second-text").innerText = overlay.querySelector("p").innerText;
+      parent.querySelector(".main-image").src = extraItem.leftImage;
+      secondDiv.querySelector(".second-image").src = extraItem.rightImage;
+      secondDiv.querySelector(".second-text").innerText = extraItem.text;
+
+      overlayContainer.remove();
+      secondDiv.classList.remove("expanded");
     });
 
     overlayContainer.appendChild(overlay);
-  }
+  });
 }
 
-loadLayout1();
-changeContent(0);
+loadLayout2();

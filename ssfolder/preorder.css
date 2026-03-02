@@ -43,7 +43,7 @@
 
 #content-area{
     margin-top: 30px;
-    min-height: 500px;
+    min-height: 750px;
     background: white;
     padding: 5px;
 }
@@ -149,29 +149,31 @@
 
 /* Main image on the left */
 .main-image {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 /* Clickable second-div */
 .second-div {
   display: flex;
   flex-direction: column;
+  height: 100%;
   gap: 5px;
   cursor: pointer;
 }
 
 .second-div .second-image {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
+    height: 75%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 /* Container to hold overlays */
 .overlay-container {
   position: absolute;
   display: flex;
+  height: 100%;
   gap: 10px; /* horizontal spacing of 3 options */
   z-index: 10;
 }
@@ -188,9 +190,9 @@
 }
 
 .overlay-div img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
+    height: 75%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 /* RIGHT SIDE */
