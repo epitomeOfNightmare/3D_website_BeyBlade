@@ -16,7 +16,7 @@ const layout2ItemsData = [
   {
     leftImage: "https://picsum.photos/80/80?1",
     rightImage: "assets/Images/Beyblades/Blade/FA-Blade.png",
-    text: "Item 1 Text",
+    text: "Speed Blade",
     extra: [
       {
         leftImage: "assets/Images/Beyblades/Blade/FA-Blade.png",
@@ -38,7 +38,7 @@ const layout2ItemsData = [
   {
     leftImage: "https://picsum.photos/80/80?2",
     rightImage: "assets/Images/Beyblades/Ratchet/FA-Ratchet.png",
-    text: "Item 2 Text",
+    text: "Speed Ratchet",
     extra: [
       {
         leftImage: "assets/Images/Beyblades/Ratchet/FA-Ratchet.png",
@@ -60,7 +60,7 @@ const layout2ItemsData = [
   {
     leftImage: "https://picsum.photos/80/80?3",
     rightImage: "assets/Images/Beyblades/Bit/FA-Bit.png",
-    text: "Item 3 Text",
+    text: "Speed Bit",
     extra: [
       {
         leftImage: "assets/Images/Beyblades/Bit/FA-Bit.png",
@@ -147,9 +147,10 @@ function loadLayout2() {
       </div>
 
       <div class="layout2-right">
-        <h1>Right Title</h1>
-        <p>Some description text here</p>
-        <button>Full Width Button</button>
+        <h1>Customised Beyblade</h1><br>
+        <p><em>Your very own custom Beyblade!</em></p><br>
+        <p class="preorderCost"><strong>$100</strong></p><br>
+        <button><strong>Add to cart</strong></button>
       </div>
     </div>
   `;

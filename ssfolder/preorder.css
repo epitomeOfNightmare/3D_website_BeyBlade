@@ -197,6 +197,9 @@
 
 /* RIGHT SIDE */
 .layout2-right {
+  padding-top: 20%;
+  padding-right: 5%;
+  padding-left: 5%;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -206,4 +209,8 @@
 .layout2-right button {
   width: 100%;
   padding: 10px;
+}
+
+.preorderCost{
+    font-size: 30px;
 }
