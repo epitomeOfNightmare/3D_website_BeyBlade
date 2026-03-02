@@ -37,6 +37,12 @@ const bit_images = [
     "assets/Images/Beyblades/Bit/SK-Bit.png",
 ]
 
+const full_models = [
+    "assets/Models/FA/FA Full.glb",
+    "assets/Models/IW/IW Full.glb",
+    "assets/Models/SK/SK Full.glb"
+]
+
 
 function changeBladeDisplay(selection)
 {
@@ -78,6 +84,10 @@ function changeBitDisplay(selection)
     })
 
     document.querySelector(".bit-part-img").src = bit_images[bit_state];
+}
+
+function swapFullModel(selection) {
+    window.changeWebGIModel("full-beyblade", full_models[selection]);
 }
 
 changeBladeDisplay(0);

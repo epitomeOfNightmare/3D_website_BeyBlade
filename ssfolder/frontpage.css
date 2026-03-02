@@ -1,0 +1,13 @@
+.card img{
+    width: 25%;
+}
+
+.model-sizing{
+    width: 25%;
+}
+.model-sizing canvas{
+    width: 100%;
+}
+.model-sizing img{
+    width: 100%;
+}
