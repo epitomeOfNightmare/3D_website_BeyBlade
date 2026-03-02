@@ -1,15 +1,15 @@
 const model_and_cost = [
     {
         model: "assets/Images/Beyblades/Whole/FA-Whole.png",
-        cost: "$10"
+        cost: "$90"
     },
     {
         model: "assets/Images/Beyblades/Whole/IW-Whole.png",
-        cost: "$20"
+        cost: "$90"
     },
     {
         model: "assets/Images/Beyblades/Whole/SK-Whole.png",
-        cost: "$30"
+        cost: "$90"
     }
 ]
 const layout2ItemsData = [
@@ -21,7 +21,7 @@ const layout2ItemsData = [
       {
         leftImage: "assets/Images/Beyblades/Blade/FA-Blade.png",
         rightImage: "assets/Images/Beyblades/Blade/FA-Blade.png",
-        text: "Attack Blade",
+        text: "Speed Blade",
       },
       {
         leftImage: "assets/Images/Beyblades/Blade/IW-Blade.png",
@@ -31,7 +31,7 @@ const layout2ItemsData = [
       {
         leftImage: "assets/Images/Beyblades/Blade/SK-Blade.png",
         rightImage: "assets/Images/Beyblades/Blade/SK-Blade.png",
-        text: "Speed Blade",
+        text: "Attack Blade",
       }
     ],
   },
@@ -43,7 +43,7 @@ const layout2ItemsData = [
       {
         leftImage: "assets/Images/Beyblades/Ratchet/FA-Ratchet.png",
         rightImage: "assets/Images/Beyblades/Ratchet/FA-Ratchet.png",
-        text: "Attack Ratchet",
+        text: "Speed Ratchet",
       },
       {
         leftImage: "assets/Images/Beyblades/Ratchet/IW-Ratchet.png",
@@ -53,7 +53,7 @@ const layout2ItemsData = [
       {
         leftImage: "assets/Images/Beyblades/Ratchet/SK-Ratchet.png",
         rightImage: "assets/Images/Beyblades/Ratchet/SK-Ratchet.png",
-        text: "Defence Ratchet",
+        text: "Attack Ratchet",
       },
     ],
   },
@@ -65,7 +65,7 @@ const layout2ItemsData = [
       {
         leftImage: "assets/Images/Beyblades/Bit/FA-Bit.png",
         rightImage: "assets/Images/Beyblades/Bit/FA-Bit.png",
-        text: "Attack Bit",
+        text: "Speed Bit",
       },
       {
         leftImage: "assets/Images/Beyblades/Bit/IW-Bit.png",
@@ -75,7 +75,7 @@ const layout2ItemsData = [
       {
         leftImage: "assets/Images/Beyblades/Bit/SK-Bit.png",
         rightImage: "assets/Images/Beyblades/Bit/SK-Bit.png",
-        text: "Speed Bit",
+        text: "Attack Bit",
       },
     ],
   },
