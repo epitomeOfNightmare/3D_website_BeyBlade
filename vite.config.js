@@ -1,0 +1,16 @@
+import { defineConfig } from 'vite'
+import topLevelAwait from 'vite-plugin-top-level-await'
+export default defineConfig({
+plugins: [topLevelAwait()],
+base: './',
+build: {
+rollupOptions: {
+input: {
+main: 'index.html', // Main entry point
+page1: 'notindex.html', // Additional page 1
+page2: 'preorder.html', // Additional page 2
+page3: 'webpage1.html'
+},
+},
+},
+});

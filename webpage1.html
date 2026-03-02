@@ -2,25 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, Initial-scaled=1.0">
-    <title>Document, alt + shift + F, to format</title>
-    <link rel="stylesheet" href="ssfolder/stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-        rel="stylesheet">
+    <title>Three.js and WebGi SDK Boilerplate</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-
+scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./scripts/style.css">
 </head>
 
-<body style="background-color: grey;">
-    <p>This is horrendous</p>
-    <div style="justify-content: center; width: 100%; display: flex;">
-        <p>I am king of the world</p>
+<body>
+    <div id="webgi-canvas-container">
+        <video id="video" loop crossOrigin="anonymous" playsinline style="display:none" muted>
+            <!-- <source
+src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@master/examples/textur
+es/sintel.ogv" type='video/ogg; codecs="theora, vorbis"'> -->
+            <source src="assets/Models/FA/FA Full.glb">
+        </video>
+        <canvas id="webgi-canvas" class="gradient"></canvas>
     </div>
-    <div style="justify-content: center; width: 100%; display: flex;">
-        <a href="index.html">back to headphones (this should be center of page)</a>
-    </div>
+    <script src="./scripts/main.js" type="module"></script>
 </body>
 
 </html>

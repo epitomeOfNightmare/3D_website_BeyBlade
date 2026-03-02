@@ -1,32 +1,60 @@
-import { ViewerApp, addBasePlugins } from "https://esm.sh/webgi";
+import {
+	ViewerApp,
+	AssetManagerPlugin,
+	CameraViewPlugin,
+	CameraView,
+	FrameFadePlugin,
+	GLTFAnimationPlugin,
+	GammaCorrectionPlugin,
+	ScrollableCameraViewPlugin,
+	addBasePlugins,
 
-const viewers = {};
-const models = ["/model1.glb", "/model2.glb", "/model3.glb"];
-let currentIndex = 0;
+	// Import THREE.js internals
+	Vector3,
+	Color, 
+	Texture,
+	Mesh,
+	VideoTexture,
+	PlaneBufferGeometry,
+} from "webgi";
 
-// Initialize WebGi viewer
-async function initViewer(containerId, modelPath) {
-  const container = document.getElementById(containerId);
-  const viewer = new ViewerApp({ canvas: container });
-  await addBasePlugins(viewer);
-  await viewer.load(modelPath);
+async function setupViewer(canvasId, modelPath) {
+	// Initialize the viewer
+	const viewer = new ViewerApp({
+			canvas: document.getElementById(canvasId),
+	})
 
-  viewer.scene.activeCamera.position.set(0, 0, 5);
-  viewer.scene.activeCamera.controls.autoRotate = true;
+	await addBasePlugins(viewer);
+	viewer.renderer.refreshPipeline();
 
-  viewers[containerId] = viewer;
+	// const manager = await viewer.addPlugin(AssetManagerPlugin);
+
+	// Import and add a GLB file
+	await viewer.load(modelPath);
+
+	// Load an environment map if not set in the glb file
+	await viewer.setEnvironmentMap("./assets/autumn forest.hdr");
+
+	// Camera transform
+	viewer.scene.activeCamera.position = new Vector3(0, 0, -10);
+	viewer.scene.activeCamera.target = new Vector3(0, 0, 0);
+		
+	// Camera options
+	const options = viewer.scene.activeCamera.getCameraOptions();
+	options.fov = 25;
+	viewer.scene.activeCamera.setCameraOptions(options);
+	
+	// Control options
+	const controls = viewer.scene.activeCamera.controls;
+	controls.autoRotate = true;
+	controls.autoRotateSpeed = 5;
+	controls.enableDamping = true;
+	controls.rotateSpeed = 2.0;
+	controls.enableZoom = true;
+	controls.enablePan = true;
+	controls.minDistance = 1.5;
+	controls.maxDistance = 10;
 }
 
-// Function your button can call
-window.swapModel = async function() {
-  currentIndex = (currentIndex + 1) % models.length;
-  const viewer = viewers["viewer1"];
-  if (!viewer) return;
-
-  viewer.scene.removeAllObjects();
-  await viewer.load(models[currentIndex]);
-  document.getElementById("status1").innerText = "Viewer 1: " + models[currentIndex];
-}
-
-// Start the viewer
-initViewer("viewer1", models[currentIndex]);
+// Set up scene for each canvas
+setupViewer("full-beyblade", "assets/Models/FA/FA Full.glb");

@@ -14,7 +14,7 @@ const model_and_cost = [
 ]
 const layout2ItemsData = [
   {
-    leftImage: "https://picsum.photos/80/80?1",
+    leftImage: "assets/Images/Beyblades/Blade/FA-Blade.png",
     rightImage: "assets/Images/Beyblades/Blade/FA-Blade.png",
     text: "Speed Blade",
     extra: [
@@ -36,7 +36,7 @@ const layout2ItemsData = [
     ],
   },
   {
-    leftImage: "https://picsum.photos/80/80?2",
+    leftImage: "assets/Images/Beyblades/Ratchet/FA-Ratchet.png",
     rightImage: "assets/Images/Beyblades/Ratchet/FA-Ratchet.png",
     text: "Speed Ratchet",
     extra: [
@@ -58,7 +58,7 @@ const layout2ItemsData = [
     ],
   },
   {
-    leftImage: "https://picsum.photos/80/80?3",
+    leftImage: "assets/Images/Beyblades/Bit/FA-Bit.png",
     rightImage: "assets/Images/Beyblades/Bit/FA-Bit.png",
     text: "Speed Bit",
     extra: [
@@ -232,4 +232,4 @@ function toggleExtraDivs(secondDiv) {
   });
 }
 
-loadLayout2();
+loadLayout1();
