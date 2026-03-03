@@ -5,6 +5,7 @@
 		<title>Beyblade</title>
 		<link rel="stylesheet" href="ssfolder/stylesheet.css" />
 		<link rel="stylesheet" href="ssfolder/frontpage.css" />
+		<script type="module" src="https://unpkg.com"></script>
 	</head>
 	<body class="page">
 
@@ -45,7 +46,7 @@
 				<!-- Single container -->
 				<div id="single" class="card" onclick="splitCards()">
 					<div class="model-sizing">
-						<canvas id="full-beyblade"></canvas>
+						<model-viewer src="assets/Models/FA/FA Full.glb" shadow-intensity="1" camera-controls auto-rotate></model-viewer>
 					</div>
 					<div class="group-info">
 						<h5 class="blade-Selected">fuck</h5>
