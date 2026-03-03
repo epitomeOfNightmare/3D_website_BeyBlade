@@ -9,10 +9,6 @@
     width: 100%;
     aspect-ratio: 1 / 1;
 }
-.model-sizing model-viewer{
-    width: 100%;
-    aspect-ratio: 1 / 1;
-}
 .model-sizing img{
     width: 100%;
 }
